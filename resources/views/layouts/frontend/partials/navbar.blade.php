@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<header id="main-header" class="w-full bg-white fixed top-0 left-0 z-50 shadow-sm">
+<header id="main-header" class="w-full bg-white fixed top-0 left-0 z-50">
     <div
         class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center relative z-50 animate__animated animate__fadeInDown">
         <div class="text-xl font-extrabold gradient-text">
