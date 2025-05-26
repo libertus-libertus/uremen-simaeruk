@@ -1,0 +1,108 @@
+/* Custom styles for gradient text if not already in style.css */
+.gradient-text {
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Basic styling for readability */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    font-weight: bold;
+    color: #2d3748;
+    /* gray-800 */
+}
+
+.article-content h1 {
+    font-size: 2.25rem;
+}
+
+/* text-4xl */
+.article-content h2 {
+    font-size: 1.875rem;
+}
+
+/* text-3xl */
+.article-content h3 {
+    font-size: 1.5rem;
+}
+
+/* text-2xl */
+.article-content h4 {
+    font-size: 1.25rem;
+}
+
+/* text-xl */
+
+.article-content p {
+    margin-bottom: 1em;
+    line-height: 1.75;
+    /* leading-relaxed */
+    color: #4a5568;
+    /* gray-700 */
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+}
+
+.article-content ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5em;
+    color: #4a5568;
+    /* gray-700 */
+}
+
+.article-content ol li {
+    list-style-type: decimal;
+    margin-bottom: 0.5em;
+    color: #4a5568;
+    /* gray-700 */
+}
+
+.article-content a {
+    color: #0d9488;
+    /* teal-600 */
+    text-decoration: underline;
+}
+
+.article-content blockquote {
+    border-left: 4px solid #14b8a6;
+    /* teal-500 */
+    padding-left: 1.25em;
+    margin-left: 0;
+    margin-bottom: 1em;
+    font-style: italic;
+    color: #5f6b7c;
+    /* gray-600 */
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5em auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-content pre {
+    background-color: #2d3748;
+    /* gray-800 */
+    color: #e2e8f0;
+    /* gray-200 */
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1em;
+    font-family: 'Fira Code', 'Roboto Mono', monospace;
+    /* Contoh font monospace */
+}

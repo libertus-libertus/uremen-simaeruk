@@ -1,0 +1,135 @@
+/* Custom styles */
+body {
+  overflow-x: hidden;
+}
+.mobile-menu {
+  transition: transform 0.3s ease-in-out;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.menu-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3889e5 0%, #02ff1b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.contact-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 201, 255, 0.5);
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.nav-link.active {
+  color: blue; /* Atau warna lain yang Anda inginkan */
+  font-weight: bold;
+  border-bottom: 2px solid blue; /* Contoh styling */
+}
+
+/* efek loader */
+/* Styling untuk Overlay Loader */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Warna latar belakang loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Pastikan loader di atas semua elemen lain */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s ease-out, visibility 0.7s ease-out; /* Animasi menghilang */
+}
+
+#loader-wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Styling untuk Spinner (Pilih salah satu) */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db; /* Warna spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animasi putar */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling untuk Dots Loader (Alternatif Spinner) */
+.dots-loader {
+  display: flex;
+  gap: 10px; /* Jarak antar titik */
+}
+
+.dots-loader div {
+  width: 15px;
+  height: 15px;
+  background-color: #3498db; /* Warna titik */
+  border-radius: 50%;
+  animation: bounce 0.8s infinite alternate; /* Animasi memantul */
+}
+
+.dots-loader div:nth-child(2) {
+  animation-delay: 0.2s; /* Penundaan animasi untuk titik kedua */
+}
+
+.dots-loader div:nth-child(3) {
+  animation-delay: 0.4s; /* Penundaan animasi untuk titik ketiga */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  } /* Jarak pantul */
+}
+
+/* blog */
+/* Custom styles for gradient text if not already in style.css */
+.gradient-text {
+  background: linear-gradient(to right, #1d976c, #93f9b9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Adjustments for blog card images */
+.blog-card-img {
+  height: 200px; /* Fixed height for consistent card appearance */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
