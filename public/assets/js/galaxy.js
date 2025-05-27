@@ -1,3 +1,4 @@
+// Start Galaxy
 const canvas = document.getElementById('galaxy-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -53,24 +54,4 @@ function animate() {
 }
 
 animate();
-
-const trigger = document.getElementById('howToGetDropdownTrigger');
-const content = document.getElementById('howToGetDropdownContent');
-
-if (trigger && content) {
-    trigger.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        event.stopPropagation(); 
-        content.classList.toggle('hidden'); // Toggle the 'hidden' class to show/hide the dropdown
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!trigger.contains(event.target) && !content.contains(event.target)) {
-            content.classList.add('hidden'); // Add 'hidden' class to hide the dropdown
-        }
-    });
-}
-
-function toggleFAQ(el) {
-    el.classList.toggle('open');
-}
+// End Galaxy

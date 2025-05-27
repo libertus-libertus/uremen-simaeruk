@@ -43,4 +43,9 @@ class HomeController extends Controller
     {
         return view('pages.single-post');
     }
+
+    public function product()
+    {
+        return view('pages.product');
+    }
 }

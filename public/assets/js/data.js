@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 once: true
             });
         }
-    }, 500); // Penundaan 0.5 detik
+    }, 500); 
+    // Penundaan 0.5 detik
 
     // JavaScript untuk Navigasi Active
     const navLinks = document.querySelectorAll('nav a');
@@ -32,21 +33,23 @@ document.addEventListener('DOMContentLoaded', function () {
     activateNavLink(navLinks);
     activateNavLink(mobileNavLinks);
 
-    // JavaScript untuk Mobile Menu Toggle
+    // Javascript untuk Mobile Navigasi
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuBackdrop = document.getElementById('menu-backdrop');
 
     if (menuToggle && mobileMenu && menuBackdrop) {
-        menuToggle.addEventListener('click', function () {
-            mobileMenu.classList.toggle('translate-x-full');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('-translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
             menuBackdrop.classList.toggle('opacity-0');
             menuBackdrop.classList.toggle('opacity-50');
             menuBackdrop.classList.toggle('pointer-events-none');
         });
 
-        menuBackdrop.addEventListener('click', function () {
-            mobileMenu.classList.add('translate-x-full');
+        menuBackdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
             menuBackdrop.classList.add('opacity-0');
             menuBackdrop.classList.remove('opacity-50');
             menuBackdrop.classList.add('pointer-events-none');

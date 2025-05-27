@@ -39,13 +39,11 @@
     <!-- Footer -->
     @includeIf('layouts.frontend.partials.footer')
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Alpine JS (Accordion) -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <!-- Custom JS -->
-    <script src="{{ asset('assets/js/uremen-galaxy.js') }}"></script>
-    <script src="{{ asset('assets/js/uremen-script.js') }}"></script>
+    <script src="{{ asset('assets/js/galaxy.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
     <script src="{{ asset('assets/js/data.js') }}"></script>
     @stack('js')
 

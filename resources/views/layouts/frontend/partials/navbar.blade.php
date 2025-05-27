@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<header id="main-header" class="w-full bg-white fixed top-0 left-0 z-50">
+<header id="main-header" class="w-full bg-white fixed top-0 left-0 z-50 shadow-sm">
     <div
         class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center relative z-50 animate__animated animate__fadeInDown">
         <div class="text-xl font-extrabold gradient-text">
@@ -19,10 +19,18 @@
 
         <div class="hidden xl:flex items-center gap-3 text-sm space-x-4">
             <a href="{{ route('blog') }}" class="block hover:text-teal-600 transition py-2">Blog</a>
-            <a href="{{ route('login') }}"
-                class="border border-teal-600 text-teal-600 px-4 py-1 rounded-full hover:bg-teal-600 hover:text-white font-semibold transition">
-                Login Here
-            </a>
+            @auth
+                <a href="{{ route('dashboard') }}"
+                    class="border border-teal-600 text-teal-600 px-4 py-1 rounded-full hover:bg-teal-600 hover:text-white font-semibold transition">
+                    Dashboard
+                </a>
+            @endauth
+            @guest
+                <a href="{{ route('login') }}"
+                    class="border border-teal-600 text-teal-600 px-4 py-1 rounded-full hover:bg-teal-600 hover:text-white font-semibold transition">
+                    Login Here
+                </a>
+            @endguest
         </div>
 
         <div class="xl:hidden flex items-center">
@@ -43,9 +51,14 @@
             <a href="{{ route('contact') }}" class="block hover:text-teal-600 transition py-2">Kontak Kami</a>
             <div class="pt-4 border-t border-gray-200">
                 <a href="{{ route('blog') }}" class="block hover:text-teal-600 transition py-2">Blog</a>
-                <a href="{{ route('login') }}"
-                    class="block border border-teal-600 text-teal-600 px-4 py-2 rounded-full text-center mt-3 hover:bg-teal-600 hover:text-white transition">Login
-                    Here</a>
+                @auth
+                    <a href="{{ route('dashboard') }}"
+                    class="block border border-teal-600 text-teal-600 px-4 py-2 rounded-full text-center mt-3 hover:bg-teal-600 hover:text-white transition">Dashboard</a>
+                @endauth
+                @guest
+                    <a href="{{ route('login') }}"
+                    class="block border border-teal-600 text-teal-600 px-4 py-2 rounded-full text-center mt-3 hover:bg-teal-600 hover:text-white transition">Login Here</a>
+                @endguest
             </div>
         </nav>
     </div>
